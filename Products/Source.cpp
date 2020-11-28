@@ -4,8 +4,9 @@ int main()
 {
 	Product newProduct;
 
-	newProduct.setNameFromKey();
+	//newProduct.setNameFromKey();
+	newProduct.setNameRandomly();
 	newProduct.printProduct();
-
+	
 	
 }

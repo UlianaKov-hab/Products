@@ -16,6 +16,7 @@ public:
 	Product();		
 	Product(string name);
 	void setNameFromKey();
+	void setNameRandomly();
 	void printProduct();
 	
 
