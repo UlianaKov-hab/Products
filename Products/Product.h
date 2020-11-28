@@ -15,6 +15,7 @@ private:
 public:
 	Product();		
 	Product(string name);
+	void setNameFromKey();
 	void printProduct();
 	
 

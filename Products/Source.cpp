@@ -2,9 +2,10 @@
 
 int main()
 {
-	Product newProduct("Bread");
+	Product newProduct;
 
+	newProduct.setNameFromKey();
 	newProduct.printProduct();
 
-
+	
 }
