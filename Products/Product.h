@@ -10,15 +10,16 @@ class Product
 {
 private:
 	string name;
-	string discriotion;
+	string discription;
 	float starting_price;
 	int discount;
 	int general_discount;
+	float residual_value;
 
 
 public:
 	Product();		
-	Product(string name, string discriotion, float starting_price);
+	Product(string name, string discription, float starting_price, int discount, int general_discount, float residual_value);
 	void setName(string name);
 	void setNameFromKey();
 	void setNameRandomly();
@@ -26,7 +27,9 @@ public:
 	void setDiscription();
 	void setStarting_price();
 	void setStarting_priceFromKey();
-
+	void setDiscountFromKey();
+	void setGeneral_discount();
+	void setResidual_value();
 
 
 	

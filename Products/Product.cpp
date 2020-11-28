@@ -4,9 +4,14 @@ Product::Product()
 {
 }
 
-Product::Product(string name, string discriotion, float starting_price)
+Product::Product(string name, string discription, float starting_price, int discount, int general_discount, float residual_value)
 {
 	this->name = name;
+	this->discription = discription;
+	this->starting_price = starting_price;
+	this->discount = discount;
+	this->general_discount = general_discount;
+	this->residual_value = residual_value;
 }
 
 void Product::setName(string name)
@@ -36,7 +41,7 @@ void Product::setDiscription()
 	cout << "Choose a discription:" << endl;
 	string discriptions[] = { "Bakery products", "Milk products", "Vegetables", "Fruit" , "Spice and seasonings" };
 	int index = MenuDiscriotion(discriptions);
-	this->discriotion = discriptions[index];
+	this->discription = discriptions[index];
 }
 
 void Product::setStarting_price()
@@ -49,6 +54,26 @@ void Product::setStarting_priceFromKey()
 	cout << "Price: ";
 	cin >> this->starting_price;
 }
+
+void Product::setDiscountFromKey()
+{
+	cout << "Discount: ";
+	cin >> this->discount;
+}
+
+void Product::setGeneral_discount()
+{
+	cout << "General discount: ";
+	cin >> this->general_discount;
+}
+
+void Product::setResidual_value()
+{
+	this->residual_value = (this->starting_price - (this->starting_price * this->discount / 100))-
+		(this->starting_price-(this->starting_price * this->discount/100)) * this->general_discount/100;
+}
+
+
 
 
 
@@ -116,10 +141,12 @@ int MenuDiscriotion(string discriptions[])
 
 void Product::printProduct()
 {
-	cout << "Name: " << name << endl;
-	cout << "Discription: " << discriotion << endl;
-	cout << "Price: "<< starting_price << endl;
-
+	cout << "Name:             " << name << endl;
+	cout << "Discription:      " << discription << endl;
+	cout << "Price:            "<< starting_price << endl;
+	cout << "Discount:         "<<discount << "%"<<endl;
+	cout << "General discount: "<<general_discount << "%" << endl;
+	cout << "Residual value:   " << residual_value << endl;
 }
 
 
