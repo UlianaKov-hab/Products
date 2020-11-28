@@ -10,6 +10,7 @@ class Product
 {
 private:
 	string name;
+	string discriotion;
 
 
 public:
@@ -17,6 +18,7 @@ public:
 	Product(string name);
 	void setNameFromKey();
 	void setNameRandomly();
+	void setDiscription();
 	void printProduct();
 	
 
@@ -24,3 +26,8 @@ public:
 
 
 };
+void SetColor(int col);
+void SetPos(int x, int y);
+void Size_Console(int x, int y);
+int Menu(string menu_items[], int SIZE);
+int MenuDiscriotion(string discriptions[]);

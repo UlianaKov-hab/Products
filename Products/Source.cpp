@@ -6,6 +6,7 @@ int main()
 
 	//newProduct.setNameFromKey();
 	newProduct.setNameRandomly();
+	newProduct.setDiscription();
 	newProduct.printProduct();
 	
 	
