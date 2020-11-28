@@ -11,14 +11,25 @@ class Product
 private:
 	string name;
 	string discriotion;
+	float starting_price;
+	int discount;
+	int general_discount;
 
 
 public:
 	Product();		
-	Product(string name);
+	Product(string name, string discriotion, float starting_price);
+	void setName(string name);
 	void setNameFromKey();
 	void setNameRandomly();
+
 	void setDiscription();
+	void setStarting_price();
+	void setStarting_priceFromKey();
+
+
+
+	
 	void printProduct();
 	
 

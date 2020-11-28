@@ -4,16 +4,20 @@ Product::Product()
 {
 }
 
-Product::Product(string name) 
+Product::Product(string name, string discriotion, float starting_price)
+{
+	this->name = name;
+}
+
+void Product::setName(string name)
 {
 	this->name = name;
 }
 
 void Product::setNameFromKey()
 {
-	cout << "Name: " << endl;
+	cout << "Name: " ;
 	getline(cin, name);
-
 }
 
 void Product::setNameRandomly()
@@ -24,13 +28,26 @@ void Product::setNameRandomly()
 	int i;
 	i = rand() % 20;
 	this->name = name[i];
+	cout << this->name << endl;
 }
 
 void Product::setDiscription()
 {
+	cout << "Choose a discription:" << endl;
 	string discriptions[] = { "Bakery products", "Milk products", "Vegetables", "Fruit" , "Spice and seasonings" };
 	int index = MenuDiscriotion(discriptions);
 	this->discriotion = discriptions[index];
+}
+
+void Product::setStarting_price()
+{
+	this->starting_price = starting_price;
+}
+
+void Product::setStarting_priceFromKey()
+{
+	cout << "Price: ";
+	cin >> this->starting_price;
 }
 
 
@@ -101,6 +118,8 @@ void Product::printProduct()
 {
 	cout << "Name: " << name << endl;
 	cout << "Discription: " << discriotion << endl;
+	cout << "Price: "<< starting_price << endl;
+
 }
 
 
