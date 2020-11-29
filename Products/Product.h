@@ -26,7 +26,7 @@ public:
 	void setName(string name);
 	void setNameFromKey();
 	void setNameRandomly();
-
+	string getName() const;
 	void setDiscription();
 	void setStarting_price();
 	void setStarting_priceFromKey();
@@ -36,8 +36,7 @@ public:
 		cout << "General discount: ";
 		cin >> general_discount0;
 	}
-	void setResidual_value();
-	//void setID();	
+	void setResidual_value();	
 	void printProduct();
 
 };

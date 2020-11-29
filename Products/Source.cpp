@@ -8,12 +8,14 @@ int main()
 	int size;
 	cout << "Enter amount of products ";
 	cin >> size;
-	cout << "Enter general_discount";
+	system("CLS");
+	//cout << "Enter general_discount";
 	//Product newProduct;
 	Product* newProduct = new Product[size];
 	for (size_t i = 0; i < size; i++)
 	{
 		newProduct[i].setNameRandomly();
+		cout << "Product " << i + 1 << ": "<< newProduct[i].getName()<<endl;		
 		newProduct[i].setDiscription();
 		newProduct[i].setStarting_priceFromKey();
 		newProduct[i].setDiscountFromKey();

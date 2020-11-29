@@ -39,7 +39,12 @@ void Product::setNameRandomly()
 	int i;
 	i = rand() % 20;
 	this->name = name[i];
-	cout << this->name << endl;
+	//cout << "Name: "<<this->name << endl;
+}
+
+string Product::getName() const
+{
+	return name;
 }
 
 void Product::setDiscription()
@@ -114,7 +119,7 @@ int Menu(string menu_items[], int SIZE)
 		key = (key + SIZE) % SIZE;
 		for (int i = 0; i < SIZE; i++)
 		{
-			SetPos(0, 2 + i);
+			SetPos(0, 3 + i);
 			if (key == i)
 			{
 
