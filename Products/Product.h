@@ -14,8 +14,7 @@ private:
 	string discription;
 	float starting_price;
 	int discount;	
-	static int general_discount0;
-	//int general_discount;
+	static int general_discount0;	
 	float residual_value;
 	int id;
 

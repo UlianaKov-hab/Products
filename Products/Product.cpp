@@ -11,8 +11,7 @@ Product::Product(string name, string discription, float starting_price, int disc
 	this->name = name;
 	this->discription = discription;
 	this->starting_price = starting_price;
-	this->discount = discount;
-	//this->general_discount = general_discount;
+	this->discount = discount;	
 	this->general_discount0 = general_discount0;
 	this->residual_value = residual_value;
 	this->id = id;	
@@ -38,8 +37,7 @@ void Product::setNameRandomly()
 							"Cabbage", "Cottage cheese" };
 	int i;
 	i = rand() % 20;
-	this->name = name[i];
-	//cout << "Name: "<<this->name << endl;
+	this->name = name[i];	
 }
 
 string Product::getName() const
@@ -72,22 +70,11 @@ void Product::setDiscountFromKey()
 	cin >> this->discount;
 }
 
-//static void Product::setGeneral_discount0()
-//{
-//	/*cout << "General discount: ";
-//	cin >> general_discount0;*/
-//}
-
 void Product::setResidual_value()
 {
 	this->residual_value = (this->starting_price - (this->starting_price * this->discount / 100))-
 		(this->starting_price-(this->starting_price * this->discount/100)) * this->general_discount0/100;
 }
-
-
-
-
-
 
 
 
@@ -142,7 +129,6 @@ int Menu(string menu_items[], int SIZE)
 	system("cls");
 	return key;
 }
-
 int MenuDiscriotion(string discriptions[])
 {
 	Size_Console(65, 45);
@@ -168,7 +154,7 @@ void Product::printProduct()
 
 
 
-//int Product::count = 0;
+
 
 
 

@@ -13,7 +13,7 @@ int main()
 	cout << "Enter general discount for all products: ";
 	cin >> gd;
 	system("CLS");
-	//Product newProduct;
+	
 	Product* newProduct = new Product[size];
 	for (size_t i = 0; i < size; i++)
 	{
@@ -27,21 +27,12 @@ int main()
 		system("CLS");
 	}
 
-	//newProduct.setNameFromKey();
-	/*newProduct.setNameRandomly();
-	newProduct.setDiscription();
-	newProduct.setStarting_priceFromKey();
-	newProduct.setDiscountFromKey();
-	newProduct.setGeneral_discount();
-	newProduct.setResidual_value();*/
 	system("CLS");
 	for (size_t i = 0; i < size; i++)
 	{
 		newProduct[i].printProduct();
 		cout << "____________________________________" << endl;
 	}
-	//newProduct[0].printProduct();
-
-	
+		
 	delete[]newProduct;
 }
