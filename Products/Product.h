@@ -5,6 +5,7 @@
 #include <conio.h>
 #include<fstream>
 #include <windows.h>
+#include<stdlib.h>
 using namespace std;
 class Product
 {
@@ -13,13 +14,14 @@ private:
 	string discription;
 	float starting_price;
 	int discount;	
+	static int general_discount0;
 	//int general_discount;
 	float residual_value;
 	int id;
 
 
 public:
-	static int general_discount0; 
+	
 	static int count;
 	Product();		
 	Product(string name, string discription, float starting_price, int discount, int general_discount0, float residual_value);
@@ -33,9 +35,7 @@ public:
 	void setDiscountFromKey();
 	static void setGeneral_discount0(int gd)
 	{
-		general_discount0 = gd;
-		/*cout << "General discount: ";
-		cin >> general_discount0;*/
+		general_discount0 = gd;		
 	}
 	void setResidual_value();	
 	void printProduct();

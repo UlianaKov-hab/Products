@@ -160,7 +160,9 @@ void Product::printProduct()
 	cout << "Price:            " << starting_price << endl;
 	cout << "Discount:         " << discount << "%"<<endl;
 	cout << "General discount: " << general_discount0 << "%" << endl;
-	cout << "Residual value:   " << residual_value << endl;
+	//cout << fixid;
+	cout.precision(2);
+	cout << "Residual value:   " << fixed << residual_value << endl;
 }
 
 
