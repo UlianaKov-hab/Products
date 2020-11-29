@@ -31,10 +31,11 @@ public:
 	void setStarting_price();
 	void setStarting_priceFromKey();
 	void setDiscountFromKey();
-	static void setGeneral_discount0()
+	static void setGeneral_discount0(int gd)
 	{
-		cout << "General discount: ";
-		cin >> general_discount0;
+		general_discount0 = gd;
+		/*cout << "General discount: ";
+		cin >> general_discount0;*/
 	}
 	void setResidual_value();	
 	void printProduct();
