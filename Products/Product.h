@@ -12,14 +12,17 @@ private:
 	string name;
 	string discription;
 	float starting_price;
-	int discount;
-	int general_discount;
+	int discount;	
+	//int general_discount;
 	float residual_value;
+	int id;
 
 
 public:
+	static int general_discount0; 
+	static int count;
 	Product();		
-	Product(string name, string discription, float starting_price, int discount, int general_discount, float residual_value);
+	Product(string name, string discription, float starting_price, int discount, int general_discount0, float residual_value);
 	void setName(string name);
 	void setNameFromKey();
 	void setNameRandomly();
@@ -28,18 +31,17 @@ public:
 	void setStarting_price();
 	void setStarting_priceFromKey();
 	void setDiscountFromKey();
-	void setGeneral_discount();
+	static void setGeneral_discount0()
+	{
+		cout << "General discount: ";
+		cin >> general_discount0;
+	}
 	void setResidual_value();
-
-
-	
+	//void setID();	
 	void printProduct();
-	
-
-
-
 
 };
+
 void SetColor(int col);
 void SetPos(int x, int y);
 void Size_Console(int x, int y);

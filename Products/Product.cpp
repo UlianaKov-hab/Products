@@ -2,16 +2,22 @@
 
 Product::Product()
 {
+	count++;
+	id = count;
 }
 
-Product::Product(string name, string discription, float starting_price, int discount, int general_discount, float residual_value)
+Product::Product(string name, string discription, float starting_price, int discount, int general_discount0, float residual_value)
 {
 	this->name = name;
 	this->discription = discription;
 	this->starting_price = starting_price;
 	this->discount = discount;
-	this->general_discount = general_discount;
+	//this->general_discount = general_discount;
+	this->general_discount0 = general_discount0;
 	this->residual_value = residual_value;
+	this->id = id;	
+	count++;
+	id = count;
 }
 
 void Product::setName(string name)
@@ -61,17 +67,19 @@ void Product::setDiscountFromKey()
 	cin >> this->discount;
 }
 
-void Product::setGeneral_discount()
-{
-	cout << "General discount: ";
-	cin >> this->general_discount;
-}
+//static void Product::setGeneral_discount0()
+//{
+//	/*cout << "General discount: ";
+//	cin >> general_discount0;*/
+//}
 
 void Product::setResidual_value()
 {
 	this->residual_value = (this->starting_price - (this->starting_price * this->discount / 100))-
-		(this->starting_price-(this->starting_price * this->discount/100)) * this->general_discount/100;
+		(this->starting_price-(this->starting_price * this->discount/100)) * this->general_discount0/100;
 }
+
+
 
 
 
@@ -143,16 +151,17 @@ void Product::printProduct()
 {
 	cout << "Name:             " << name << endl;
 	cout << "Discription:      " << discription << endl;
-	cout << "Price:            "<< starting_price << endl;
-	cout << "Discount:         "<<discount << "%"<<endl;
-	cout << "General discount: "<<general_discount << "%" << endl;
+	cout << "ID:               " << id << endl;
+	cout << "Price:            " << starting_price << endl;
+	cout << "Discount:         " << discount << "%"<<endl;
+	cout << "General discount: " << general_discount0 << "%" << endl;
 	cout << "Residual value:   " << residual_value << endl;
 }
 
 
 
 
-
+//int Product::count = 0;
 
 
 
